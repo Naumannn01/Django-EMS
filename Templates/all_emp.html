@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Employee</title>
+</head>
+
+<body>
+
+    <style>
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        td,
+        th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #dddddd;
+        }
+    </style>
+
+
+        <h1>All Employees</h1>
+        <hr>
+        <table>
+
+            <tr>
+                <th>#</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Location</th>
+                <th>Department</th>
+                <th>Phone</th>
+                <th>Salary</th>
+                <th>Bonus</th>
+                <th>Role</th>
+                <th>Date</th>
+            </tr>
+            {% for emp in emps  %}
+            
+            <tr>
+                <td>{{emp.id}}</td>
+                <td>{{emp.first_name}}</td>
+                <td>{{emp.last_name}}</td>
+                <td>{{emp.dept.location}}</td>
+                <td>{{emp.dept}}</td>
+                <td>{{emp.phone}}</td>
+                <td>{{emp.salary}}</td>
+                <td>{{emp.bonus}}</td>
+                <td>{{emp.role}}</td>
+                <td>{{emp.hire_data}}</td>
+
+
+            </tr>
+            {% endfor %}
+        </table>
+    </body>
+
+</html>
