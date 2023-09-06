@@ -1,4 +1,7 @@
 # Django-EMS
+
+Currently designing its frontend 
+
 Office Employee Management System
 
 
